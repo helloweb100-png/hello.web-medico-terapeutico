@@ -193,6 +193,27 @@ section,header,footer{position:relative}
 .spark{display:block;flex-shrink:0;width:clamp(18px,2.6vw,34px);height:clamp(18px,2.6vw,34px);background:var(--amber);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
 
 /* =================================================================
+   INTRO HOMEOPATÍA
+================================================================= */
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px;font-family:var(--f-mono);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--emerald)}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--amber)}
+.homeo{padding:clamp(80px,10vw,140px) 0;background:var(--paper-2)}
+.homeo-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+@media(min-width:1000px){.homeo-grid{grid-template-columns:1fr 1fr;gap:80px}}
+.homeo-copy .h2{margin-bottom:22px}
+.homeo-ideas{display:flex;flex-direction:column;gap:14px}
+.idea{position:relative;overflow:hidden;padding:28px 26px;background:#fff;border:1px solid var(--line);border-radius:var(--r);transition:border-color .3s,box-shadow .5s var(--ease)}
+.idea:hover{border-color:rgba(15,107,84,.35);box-shadow:var(--shadow-soft)}
+.idea-n{display:block;margin-bottom:12px;font-family:var(--f-mono);font-weight:600;font-size:13px;letter-spacing:.1em;color:var(--emerald)}
+.idea h3{font-family:var(--f-display);font-size:clamp(22px,2.4vw,28px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:10px}
+.idea p{font-size:15.5px;color:var(--muted);line-height:1.7}
+.homeo-how{position:relative;display:grid;grid-template-columns:1fr;gap:18px;margin-top:clamp(28px,4vw,48px);padding:clamp(30px,5vw,56px);border-radius:var(--r);overflow:hidden;color:#fff;background:linear-gradient(150deg,var(--emerald) 0%,var(--emerald-2) 55%,var(--emerald-3) 100%)}
+.homeo-how::before{content:'';position:absolute;right:-8%;top:-45%;width:55%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(242,163,58,.42),transparent 68%);filter:blur(24px);pointer-events:none}
+.homeo-how .h3{position:relative;font-size:clamp(26px,3.6vw,44px);letter-spacing:-.035em}
+.homeo-how p{position:relative;max-width:62ch;font-size:clamp(16px,1.5vw,19px);line-height:1.75;color:rgba(255,255,255,.88)}
+@media(min-width:1000px){.homeo-how{grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}}
+
+/* =================================================================
    STATEMENT
 ================================================================= */
 .statement{padding:clamp(80px,12vw,170px) 0 clamp(70px,9vw,130px);background:var(--paper)}
@@ -210,6 +231,35 @@ section,header,footer{position:relative}
 .s-card p{font-size:14.5px;color:var(--muted);line-height:1.65}
 .spot::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(242,163,58,.18),transparent 62%);opacity:0;transition:opacity .35s}
 .spot:hover::before{opacity:1}
+
+/* =================================================================
+   HARM (daños de la diabetes)
+================================================================= */
+.harm{padding:clamp(80px,10vw,150px) 0;background:var(--ink);color:#fff;overflow:hidden}
+.harm::before,.harm::after{content:'';position:absolute;border-radius:50%;pointer-events:none}
+.harm::before{right:-12%;top:-10%;width:640px;max-width:80vw;aspect-ratio:1;background:radial-gradient(circle,rgba(242,163,58,.2),transparent 68%);filter:blur(40px)}
+.harm::after{left:-14%;bottom:-16%;width:560px;max-width:80vw;aspect-ratio:1;background:radial-gradient(circle,rgba(15,107,84,.45),transparent 68%);filter:blur(40px)}
+.harm>.container{position:relative;z-index:1}
+.harm-head{max-width:980px;margin-bottom:clamp(40px,6vw,76px)}
+.harm .h2,.harm .h3{color:#fff}
+.harm .amb{color:var(--amber)}
+.harm .gi{width:48px;height:48px;background:rgba(242,163,58,.16);color:var(--amber-2)}
+.harm-group+.harm-group{margin-top:clamp(56px,8vw,100px)}
+.harm-gh{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.harm-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:620px){.harm-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+@media(min-width:1100px){.harm-grid{grid-template-columns:repeat(4,1fr);gap:16px}}
+.h-card{position:relative;overflow:hidden;display:flex;gap:18px;align-items:flex-start;padding:24px 22px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);transition:border-color .3s,background .4s}
+.h-card:hover{border-color:rgba(242,163,58,.5);background:rgba(255,255,255,.08)}
+@media(min-width:1100px){.h-card{flex-direction:column;gap:22px;padding:28px 24px}}
+.h-card h4{font-family:var(--f-display);font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:8px;color:#fff}
+.h-card p{font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.72)}
+.emo-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:1000px){.emo-grid{grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.emo-lead{position:sticky;top:120px}}
+.emo-lead{font-family:var(--f-display);font-weight:700;font-size:clamp(24px,3vw,38px);letter-spacing:-.03em;line-height:1.15;color:#fff;max-width:18em}
+.emo-list li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:clamp(15.5px,1.4vw,18px);line-height:1.6;color:rgba(255,255,255,.86)}
+.emo-list li:first-child{border-top:1px solid rgba(255,255,255,.14)}
+.emo-list li::before{content:'';flex-shrink:0;width:14px;height:14px;margin-top:.4em;background:var(--amber);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
 
 /* =================================================================
    STORY (diabetes) - sticky scrollytelling
@@ -450,7 +500,13 @@ a.info-row:hover{padding-left:10px}
 .info-ic svg{width:19px;height:19px}
 .info-row b{display:block;font-size:14px;margin-bottom:2px}
 .info-row span:not(.info-ic){font-size:14.5px;color:rgba(255,255,255,.75)}
-.map-frame{margin-top:26px;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.2)}
+.map-block{margin-top:26px}
+.map-tabs{display:flex;gap:8px;margin-bottom:12px}
+.map-tab{padding:9px 18px;font-size:13px;font-weight:700;border:1.5px solid rgba(255,255,255,.35);border-radius:var(--r);color:rgba(255,255,255,.88);transition:background .3s,color .3s,border-color .3s}
+.map-tab:hover{border-color:var(--amber-2);color:#fff}
+.map-tab.is-on{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.map-tab:focus-visible{outline:2px solid var(--amber-2);outline-offset:2px}
+.map-frame{aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.2)}
 .map-frame iframe{width:100%;height:100%;border:0;filter:saturate(.85) contrast(1.05)}
 
 .book{background:#fff;color:var(--ink);padding:30px 22px;border-radius:var(--r);box-shadow:0 50px 90px -40px rgba(0,0,0,.6);display:flex;flex-direction:column;gap:16px}

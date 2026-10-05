@@ -126,6 +126,23 @@
   }
 
   /* =============================================================
+     MAP TABS (Jacarandas / Xalpa)
+  ============================================================= */
+  var mapFrame = $('#map-iframe'), mapTabs = $$('.map-tab');
+  mapTabs.forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!mapFrame || b.classList.contains('is-on')) return;
+      mapTabs.forEach(function (o) {
+        var on = o === b;
+        o.classList.toggle('is-on', on);
+        o.setAttribute('aria-pressed', String(on));
+      });
+      mapFrame.title = b.dataset.title;
+      mapFrame.src = b.dataset.map;
+    });
+  });
+
+  /* =============================================================
      SPOTLIGHT (cursor-follow glow on cards)
   ============================================================= */
   if (fine) {
@@ -221,7 +238,8 @@
 
   $$('[data-spy]').forEach(function (a) {
     var sec = $('#' + a.dataset.spy); if (!sec) return;
-    ScrollTrigger.create({ trigger: sec, start: 'top 55%', end: 'bottom 55%', onToggle: function (s) { a.classList.toggle('active', s.isActive); } });
+    var endSec = (a.dataset.spyEnd && $('#' + a.dataset.spyEnd)) || sec;
+    ScrollTrigger.create({ trigger: sec, endTrigger: endSec, start: 'top 55%', end: 'bottom 55%', onToggle: function (s) { a.classList.toggle('active', s.isActive); } });
   });
 
   /* story steps */
